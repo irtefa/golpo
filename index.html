@@ -4,6 +4,7 @@
     <title>Chat server</title>
     <script src="http://localhost:8000/socket.io/socket.io.js"></script>
     <script src="js/jquery.min.js"></script>
+    <script src="js/avro.js"></script>
     <link href="css/bootstrap.css" rel="stylesheet"></link>
     <link href="css/bootstrap-responsive.min.css" rel="stylesheet"></link>
   </head>
@@ -15,12 +16,19 @@
       <form id="chat-form" class="search-form">
         <fieldset>
           <label> Chat </label>
-          <input type="text" placeholder="Type something..." id="chat-input">
+          <p>
+            <textarea class="bangla" placeholder="Type in Bangla"></textarea>
+          </p>
+          <p>
+            <textarea class="english" placeholder="Type in English"></textarea>
+          </p>
           <br>
-          <div class="btn" id="submit-btn">Send</div>
+          <div class="btn" id="submit-bngl">Bangla</div>
+          <div class="btn" id="submit-engl">English</div>
         </fieldset>
       </form>
     </div>
     <script src="client.js"></script>
+    <script src="js/bangla.js" type="text/javascript" charset="utf-8"></script>
   </body>
 </html>
