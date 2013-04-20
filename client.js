@@ -1,5 +1,4 @@
 var socket = io.connect('http://localhost:8000');
-window.bangla = false;
 
 socket.on('connect', function(){
     var name = prompt("What is your name?");
@@ -29,8 +28,7 @@ $('#submit-engl').click(function(e) {
 });
 
 socket.on('chat', function(data){
-    $("#chat-list").append("<p>" + data.name +": " + data.msg +"</p>");
-    console.log(data);
+    $('#chat-list').append("<p>" + data.name +": " + data.msg +"</p> <p>Posted at: " + moment().format('MMMM Do YYYY, h:mm:ss a') + "</p><hr>");
 });
 
 

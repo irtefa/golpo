@@ -1,6 +1,7 @@
 var socket = require('socket.io');
 var io = socket.listen(8000);
 
+
 io.sockets.on('connection', function(client) {
     client.on('join', function(name){
         client.set('nickname', name);
