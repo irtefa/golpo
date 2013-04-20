@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Chat server</title>
+    <script src="http://localhost:8000/socket.io/socket.io.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <link href="css/bootstrap.css" rel="stylesheet"></link>
+    <link href="css/bootstrap-responsive.min.css" rel="stylesheet"></link>
+  </head>
+  <body>
+    <div class="container">
+      <legend class="search-form">golpo</legend>
+      <div id="chat-list">
+      </div>
+      <form id="chat-form" class="search-form">
+        <fieldset>
+          <label> Chat </label>
+          <input type="text" placeholder="Type something..." id="chat-input">
+          <br>
+          <div class="btn" id="submit-btn">Send</div>
+        </fieldset>
+      </form>
+    </div>
+    <script src="client.js"></script>
+  </body>
+</html>
