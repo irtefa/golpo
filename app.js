@@ -7,7 +7,7 @@ io.sockets.on('connection', function(client) {
     });
     client.on('message', function(msg) {
         client.get('nickname', function(err, name){
-            client.broadcast.emit('chat', {'name': name, 'msg': msg});
+            io.sockets.emit('chat', {'name': name, 'msg': msg});
         });
     });
 });

@@ -8,6 +8,7 @@ socket.on('connect', function(){
 
 $('#submit-bngl').click(function(e) {
     var msg = $('.bangla').val();
+    $('.bangla').val('');
     if(msg === ""){
         alert("Cannot send empty messages!");
     }
@@ -18,6 +19,7 @@ $('#submit-bngl').click(function(e) {
 
 $('#submit-engl').click(function(e) {
     var msg = $('.english').val();
+    $('.english').val('');
     if(msg === ""){
         alert("Cannot send empty messages!");
     }
