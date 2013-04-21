@@ -7,21 +7,30 @@
     <script src="js/avro.js"></script>
     <script src="js/moment.js"></script>
     <link href="css/bootstrap.css" rel="stylesheet"></link>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/bootstrap-responsive.min.css" rel="stylesheet"></link>
+    <link href="css/style.css" rel="stylesheet"></link>
   </head>
   <body>
     <div class="container">
       <legend class="search-form">golpo</legend>
-      <div id="chat-list">
+      <div class="8">
+        <div class="span3 scroll-left">
+          <ul id="user-list" class="unstyled">
+          </ul>
+        </div>
+        <div id="chat-list" class="span5 scroll-right">
+        </div>
       </div>
       <form id="chat-form" class="search-form">
         <fieldset>
-          <label> Chat </label>
+          <hr>
+          <label>YOU ARE CONNECTED!</label>
           <p>
-            <textarea class="bangla" placeholder="Type in Bangla"></textarea>
+            <textarea class="bangla span6" placeholder="Type in Bangla"></textarea>
           </p>
           <p>
-            <textarea class="english" placeholder="Type in English"></textarea>
+            <textarea class="english span6" placeholder="Type in English"></textarea>
           </p>
           <br>
           <div class="btn" id="submit-bngl">Bangla</div>
