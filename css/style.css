@@ -1,18 +1,24 @@
 .scroll-right{
     width: 800px;
     height:340px;
-    overflow: scroll;
-    /*
-    overflow-y: hidden;
-    overflow-x: hidden;
-    */
+    overflow: hidden;
     float: right;
+    padding-left: 12px;
+    border-left: 1px solid gray;
+}
+.scroll-right-inner{
+    width: 818px;
+    height: 340px;
+    overflow-y: scroll;
 }
 .scroll-left{
     height: 340px;
-    overflow: scroll;
-    /*
-    overflow-y: hidden;
-    overflow-x: hidden;
-    */
+    width: 200px;
+    overflow: hidden;
+    padding-right: -5px;
+}
+.scroll-left-inner{
+    height: 340px;
+    width: 218px;
+    overflow-y: scroll;
 }
