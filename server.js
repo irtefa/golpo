@@ -13,7 +13,7 @@ server.on('request', function(request, response) {
   request.on('data', function(chunk) {
     uploadedBytes += chunk.length;
     var progress = (uploadedBytes / fileBytes) * 100;
-    response.write("progress: " + parseInt(progress) + "%\n");
+    response.write("progress: " + parseInt(progress,10) + "%\n");
   });
 
   request.on('end', function() {
