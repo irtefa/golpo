@@ -7,6 +7,6 @@
   "engines": {
     "node": "0.10.x",
     "npm": "1.1.x",
-    "socket.io": "0.9.14"
+    "socket.io": "~0.9.x"
   }
 }
