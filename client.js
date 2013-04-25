@@ -1,4 +1,4 @@
-var socket = io.connect('http://localhost:8000');
+var socket = io.connect();
 
 socket.on('connect', function(){
     var name = prompt("What is your name?");
