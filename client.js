@@ -25,6 +25,16 @@ socket.on('connect', function(){
 
 });
 
+$('#bngl').click(function(e) {
+    $('.bangla').removeClass('hidden');
+    $('.english').addClass('hidden');
+});
+
+$('#engl').click(function(e) {
+    $('.english').removeClass('hidden');
+    $('.bangla').addClass('hidden');
+});
+
 $('#submit-bngl').click(function(e) {
     var msg = $('.bangla').val();
     $('.bangla').val('');

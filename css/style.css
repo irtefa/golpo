@@ -22,3 +22,7 @@
     width: 218px;
     overflow-y: scroll;
 }
+
+.hidden {
+    display: none;
+}
