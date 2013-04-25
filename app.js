@@ -3,7 +3,7 @@ var express = require('express');
 var app = express();
 var server = require('http').createServer(app);
 
-server.listen(8000);
+server.listen(process.env.PORT || 8000);
 var clients = [];
 var messages = [];
 
