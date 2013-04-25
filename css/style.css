@@ -26,3 +26,13 @@
 .hidden {
     display: none;
 }
+
+/* CSS added by Irtefa */
+.search-title{
+  font-size: 50px;
+  text-align: center;
+}
+.search-form{
+  text-align: center;
+  border-radius: 12px;
+}

@@ -28,11 +28,15 @@ socket.on('connect', function(){
 $('#bngl').click(function(e) {
     $('.bangla').removeClass('hidden');
     $('.english').addClass('hidden');
+    $('#engl').removeClass('hide');
+    $('#bngl').addClass('hide');
 });
 
 $('#engl').click(function(e) {
     $('.english').removeClass('hidden');
     $('.bangla').addClass('hidden');
+    $('#bngl').removeClass('hide');
+    $('#engl').addClass('hide');
 });
 
 $('#submit-bngl').click(function(e) {
