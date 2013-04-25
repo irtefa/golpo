@@ -39,26 +39,17 @@ $('#engl').click(function(e) {
     $('#engl').addClass('hide');
 });
 
-$('#submit-bngl').click(function(e) {
-    var msg = $('.bangla').val();
-    $('.bangla').val('');
-    if(msg === ""){
-        alert("Cannot send empty messages!");
+$('#send').click(function(e) {
+    var msg = "";
+    if ($('.english').val() ==="") {
+        msg = $('.bangla').val();
+        $('.bangla').val('');
     }
-    else{
-        socket.emit('message', msg, moment().format('MMMM Do YYYY, h:mm:ss a'));
+    else {
+        msg = $('.english').val();
+        $('.english').val('');
     }
-});
-
-$('#submit-engl').click(function(e) {
-    var msg = $('.english').val();
-    $('.english').val('');
-    if(msg === ""){
-        alert("Cannot send empty messages!");
-    }
-    else{
-        socket.emit('message', msg, moment().format('MMMM Do YYYY, h:mm:ss a'));
-    }
+    socket.emit('message', msg, moment().format('MMMM Do YYYY, h:mm:ss a'));
 });
 
 socket.on('chat', function(data) {
