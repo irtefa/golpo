@@ -2,7 +2,7 @@ var socket = require('socket.io');
 var express = require('express');
 var app = express();
 var server = require('http').createServer(app);
-//var app = express().listen(8000);
+
 server.listen(8000);
 var clients = [];
 var messages = [];
