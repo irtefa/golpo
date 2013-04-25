@@ -4,6 +4,7 @@ socket.on('connect', function(){
     var name = prompt("What is your name?");
     socket.emit('join', name);
 
+    // append the user when a new user signs in
     socket.on('new_user', function(name) {
         $('#user-list').append("<li>" + name + "<li><hr>");
     });

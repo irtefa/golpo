@@ -7,10 +7,11 @@ var messages = [];
 io.sockets.on('connection', function(client) {
 
     client.on('join', function(name){
+        // set nickname
         client.set('nickname', name);
+        // only emit a new username
         io.sockets.emit('new_user', name);
         clients.push(name);
-        console.log(clients);
     });
 
     io.sockets.emit('users', clients, messages);
