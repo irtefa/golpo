@@ -3,25 +3,20 @@
   <head>
     <title>Chat server</title>
     <script src="/socket.io/socket.io.js"></script>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/avro.js"></script>
-    <script src="js/moment.js"></script>
-    <link href="css/bootstrap.css" rel="stylesheet"></link>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="css/bootstrap-responsive.min.css" rel="stylesheet"></link>
     <link href="css/style.css" rel="stylesheet"></link>
   </head>
   <body>
     <div class="container">
       <legend class="search-form">golpo</legend>
       <div class="">
-        <div class="span3 scroll-left">
+        <div class="scroll-left">
           <div class="scroll-left-inner">
             <ul id="user-list" class="unstyled">
             </ul>
           </div>
         </div>
-        <div class="span5 scroll-right">
+        <div class="scroll-right">
           <div id="chat-list" class="scroll-right-inner">
           </div>
         </div>
@@ -42,6 +37,9 @@
         </fieldset>
       </form>
     </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/avro.js"></script>
+    <script src="js/moment.js"></script>
     <script src="client.js"></script>
     <script src="js/bangla.js" type="text/javascript" charset="utf-8"></script>
   </body>
