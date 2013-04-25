@@ -3,15 +3,19 @@ var socket = io.connect('http://localhost:8000');
 socket.on('connect', function(){
     var name = prompt("What is your name?");
     socket.emit('join', name);
-    // add client's name to the list
-    //$('#user-list').append("<li>" + name + "</li><hr>");
+
+    socket.on('new_user', function(name) {
+        $('#user-list').append("<li>" + name + "<li><hr>");
+    });
+
     socket.on('users', function(clients, messages) {
+        // clear list to avoid duplications or users and messages
         $('#user-list').empty();
+        $('#chat-list').empty();
         // show people who are online
         for(i=0; i < clients.length; i++){
             $('#user-list').append("<li>" + clients[i] + "</li><hr>");
         }
-        $('#chat-list').empty();
         // show message history in the chat room
         for(i=0; i < messages.length; i++){
             $('#chat-list').append("<p>" + messages[i].name +": " + messages[i].msg +"</p> <p>Posted at: " + messages[i].time+ "</p><hr>");

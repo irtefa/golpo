@@ -8,6 +8,7 @@ io.sockets.on('connection', function(client) {
 
     client.on('join', function(name){
         client.set('nickname', name);
+        io.sockets.emit('new_user', name);
         clients.push(name);
         console.log(clients);
     });
