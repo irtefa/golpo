@@ -56,4 +56,3 @@ socket.on('chat', function(data) {
     $('#chat-list').append("<p><b>" + data.name +"</b>: " + data.msg +"</p> <p><b>At:</b> " + moment().format('MMMM Do YYYY, h:mm a') + "</p><hr>");
 });
 
-
