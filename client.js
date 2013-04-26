@@ -21,7 +21,6 @@ socket.on('connect', function(){
         for(i=0; i < messages.length; i++){
             $('#chat-list').append("<p><b>" + messages[i].name +"</b>: " + messages[i].msg +"</p> <p>Posted at: " + messages[i].time+ "</p><hr>");
         }
-        $('#chat-list').scrollTo('#bottom');
     });
 
 });
