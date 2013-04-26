@@ -1,25 +1,17 @@
-.scroll-right{
+.users{
     width: 800px;
-    height:340px;
     overflow: hidden;
-    float: right;
-    padding-left: 12px;
-    border-left: 1px solid gray;
 }
-.scroll-right-inner{
+.users-inner{
     width: 818px;
-    height: 340px;
     overflow-y: scroll;
 }
-.scroll-left{
-    height: 340px;
-    width: 200px;
+.messages{
+    width: 800px;
     overflow: hidden;
-    padding-right: -5px;
 }
-.scroll-left-inner{
-    height: 340px;
-    width: 218px;
+.messages-inner{
+    width: 818px;
     overflow-y: scroll;
 }
 

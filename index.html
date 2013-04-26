@@ -7,35 +7,41 @@
     <link href="css/style.css" rel="stylesheet"></link>
     <link href="css/bootstrap.css" rel="stylesheet"></link>
   </head>
-  <body>
+  <body background="texture.png">
     <div class="container">
       <legend class="search-form">golpo</legend>
       <div class="">
-        <div class="scroll-left">
-          <div class="scroll-left-inner">
-            <ul id="user-list" class="unstyled">
-            </ul>
+        <div class="user-box users">
+          <div class="users-inner">
+            <p class="btn btn-warning">ONLINE</p>
+            <br>
+            <br>
+            <div id="user-list" class="unstyled">
+            </div>
           </div>
         </div>
-        <div class="scroll-right">
-          <div id="chat-list" class="scroll-right-inner">
+        <div class="messages">
+          <p class="btn btn-info">CHAT</p>
+          <br>
+          <br>
+          <div id="chat-list" class="messages-inner">
           </div>
+          <hr id="bottom">
         </div>
       </div>
       <form id="chat-form" class="search-form">
         <fieldset>
           <hr>
-          <label>YOU ARE CONNECTED!</label>
           <p>
             <textarea class="bangla span6 hidden" placeholder="Type in Bangla"></textarea>
           </p>
           <p>
-            <textarea class="english span6" placeholder="Type in English"></textarea>
+            <textarea class="english span6 disabled" id="disabledInput"placeholder="Type in English"></textarea>
           </p>
           <br>
-          <div class="btn" id="bngl">Bangla</div>
-          <div class="btn hide" id="engl">English</div>
-          <div class="btn" id="send">SEND</div>
+          <div class="btn btn-success" id="bngl">Bangla</div>
+          <div class="btn btn-primary hide" id="engl">English</div>
+          <div class="btn btn-danger" id="send">SEND</div>
         </fieldset>
       </form>
     </div>

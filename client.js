@@ -6,7 +6,7 @@ socket.on('connect', function(){
 
     // append the user when a new user signs in
     socket.on('new_user', function(name) {
-        $('#user-list').append("<li>" + name + "<li><hr>");
+        $('#user-list').append("<p>" + name + "</p><hr>");
     });
 
     socket.on('users', function(clients, messages) {
@@ -15,12 +15,13 @@ socket.on('connect', function(){
         $('#chat-list').empty();
         // show people who are online
         for(i=0; i < clients.length; i++){
-            $('#user-list').append("<li>" + clients[i] + "</li><hr>");
+            $('#user-list').append("<p>" + clients[i] + "</p><hr>");
         }
         // show message history in the chat room
         for(i=0; i < messages.length; i++){
-            $('#chat-list').append("<p>" + messages[i].name +": " + messages[i].msg +"</p> <p>Posted at: " + messages[i].time+ "</p><hr>");
+            $('#chat-list').append("<p><b>" + messages[i].name +"</b>: " + messages[i].msg +"</p> <p>Posted at: " + messages[i].time+ "</p><hr>");
         }
+        $('#chat-list').scrollTo('#bottom');
     });
 
 });
@@ -53,7 +54,7 @@ $('#send').click(function(e) {
 });
 
 socket.on('chat', function(data) {
-    $('#chat-list').append("<p>" + data.name +": " + data.msg +"</p> <p>Posted at: " + moment().format('MMMM Do YYYY, h:mm:ss a') + "</p><hr>");
+    $('#chat-list').append("<p><b>" + data.name +"</b>: " + data.msg +"</p> <p>Posted at: " + moment().format('MMMM Do YYYY, h:mm:ss a') + "</p><hr>");
 });
 
 
