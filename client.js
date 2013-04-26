@@ -19,7 +19,7 @@ socket.on('connect', function(){
         }
         // show message history in the chat room
         for(i=0; i < messages.length; i++){
-            $('#chat-list').append("<p><b>" + messages[i].name +"</b>: " + messages[i].msg +"</p> <p>Posted at: " + messages[i].time+ "</p><hr>");
+            $('#chat-list').append("<p><b>" + messages[i].name +"</b>: " + messages[i].msg +"</p> <p><b>At:</b> " + messages[i].time+ "</p><hr>");
         }
     });
 
@@ -49,11 +49,11 @@ $('#send').click(function(e) {
         msg = $('.english').val();
         $('.english').val('');
     }
-    socket.emit('message', msg, moment().format('MMMM Do YYYY, h:mm:ss a'));
+    socket.emit('message', msg, moment().format('MMMM Do YYYY, h:mm a'));
 });
 
 socket.on('chat', function(data) {
-    $('#chat-list').append("<p><b>" + data.name +"</b>: " + data.msg +"</p> <p>Posted at: " + moment().format('MMMM Do YYYY, h:mm:ss a') + "</p><hr>");
+    $('#chat-list').append("<p><b>" + data.name +"</b>: " + data.msg +"</p> <p><b>At:</b> " + moment().format('MMMM Do YYYY, h:mm a') + "</p><hr>");
 });
 
 
