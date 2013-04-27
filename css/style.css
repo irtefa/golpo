@@ -1,8 +1,5 @@
 .hero {
-  padding-left: 40px;
-  padding-right: 40px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding: 20px 40px 20px 40px;
 }
 
 .users {
@@ -13,11 +10,11 @@
     width: 818px;
     overflow-y: scroll;
 }
-.messages{
+.messages {
     width: 800px;
     overflow: hidden;
 }
-.messages-inner{
+.messages-inner {
     width: 818px;
     overflow-y: scroll;
 }
@@ -26,12 +23,11 @@
     display: none;
 }
 
-/* CSS added by Irtefa */
-.search-title{
+.search-title {
   font-size: 50px;
   text-align: center;
 }
-.search-form{
+.search-form {
   text-align: center;
   border-radius: 12px;
 }
