@@ -1,8 +1,15 @@
-.users{
+.hero {
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.users {
     width: 800px;
     overflow: hidden;
 }
-.users-inner{
+.users-inner {
     width: 818px;
     overflow-y: scroll;
 }
